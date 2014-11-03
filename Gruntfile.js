@@ -306,6 +306,7 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             '*.html',
+            'CNAME',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
             'fonts/*'
@@ -327,7 +328,13 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
-      }
+      },
+      'gh-pages': {
+        options: {
+          base: 'dist'
+        },
+        src: ['**']
+      },
     },
 
     // Run some tasks in parallel to speed up the build process
