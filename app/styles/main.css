@@ -77,3 +77,9 @@ body {
     border-bottom: 0;
   }
 }
+
+/*TOOLS*/
+
+#katex-out {
+  margin: 10px 0;
+}

@@ -27,6 +27,10 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
+      .when('/katex', {
+        templateUrl: 'views/katex.html',
+        controller: 'KatexCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
