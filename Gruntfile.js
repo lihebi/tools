@@ -328,13 +328,7 @@ module.exports = function (grunt) {
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
         src: '{,*/}*.css'
-      },
-      'gh-pages': {
-        options: {
-          base: 'dist'
-        },
-        src: ['**']
-      },
+      }
     },
 
     // Run some tasks in parallel to speed up the build process
@@ -358,7 +352,13 @@ module.exports = function (grunt) {
         configFile: 'test/karma.conf.js',
         singleRun: true
       }
-    }
+    },
+    'gh-pages': {
+      options: {
+        base: 'dist'
+      },
+      src: ['**']
+    },
   });
 
 
